@@ -1,23 +1,10 @@
 #!/usr/bin/env python
-# coding: utf-8
-
-# In[6]:
-
-
 import os,shutil
 import cv2
-
-
-# In[7]:
-
 
 directory="d://docs//Kannada project//cropped images//dataset2_File410-509//Combine"
 l= os.listdir(directory)
 l.sort(key=lambda s: os.path.getmtime(os.path.join(directory, s)))
-
-
-# In[8]:
-
 
 ds=input("Enter dataset no: ")
 prev=""
@@ -52,10 +39,3 @@ for i in l:
         d=dest+'{}/D{}{}'.format(no,ds,i)
         shutil.copy(directory+"//{}".format(i),d)       
 cv2.destroyAllWindows()
-
-
-# In[ ]:
-
-
-
-
